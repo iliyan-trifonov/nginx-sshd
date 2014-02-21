@@ -1,0 +1,12 @@
+server {
+    listen 80 default_server;
+
+    root /sites;
+    index index.html index.htm;
+
+    server_name localhost;
+
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+}
